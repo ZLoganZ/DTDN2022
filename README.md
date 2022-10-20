@@ -1,4 +1,6 @@
-# Họ tên sinh viên
+# Đề tài: Tìm hiểu về Kubernetes và demo ứng dụng
+
+### Họ tên sinh viên
 ###
 Nguyễn Hoàng Hải `20161051`
 ###
