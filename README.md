@@ -8,6 +8,7 @@ Nguyễn Văn Đạt `20110455`
 ###
 Tăng Phúc Toàn `20110100`
 ###
+## Các bước cài đặt demo đơn giản
 Bước 1: Cài đặt docker
 Thực hiện lệnh cài đặt:
 ```
@@ -80,5 +81,5 @@ Kiểm tra các thành phần đang chạy
 ```
 Truy web với ip máy và port 30000
 ```
-http://192.168.49.2:30000/
+Ex: http://192.168.49.2:30000/
 ```
