@@ -54,7 +54,8 @@ Chạy minikube trên server với lệnh
 # minikube start --network-plugin=cni --vm-driver=docker –force
 ```
 Kiểm tra cài đặt bằng lệnh
-```# minikube status
+```
+# minikube status
 ```
 hoặc
 ```
