@@ -1,0 +1,6 @@
+resources:
+  - secret/mongo-secret.yaml
+  - config/mongo-configmap.yaml
+  - pv/mongo-pv1.yaml
+  - deployment/mongo.yaml
+  - deployment/mongo-express.yaml
