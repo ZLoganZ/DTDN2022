@@ -9,7 +9,8 @@ Nguyễn Văn Đạt `20110455`
 Tăng Phúc Toàn `20110100`
 ###
 ## Các bước cài đặt demo đơn giản
-Bước 1: Cài đặt docker ###
+Bước 1: Cài đặt docker
+###
 Thực hiện lệnh cài đặt:
 ```
 # sudo apt install -y docker.io
