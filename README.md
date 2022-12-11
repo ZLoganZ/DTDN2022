@@ -18,7 +18,7 @@ $ sudo su
 ```
 Thực hiện lệnh cài đặt:
 ```
-# sudo apt install -y docker.io
+# sudo apt-get install -y docker.io
 ```
 Kiểm tra phiên bản docker bằng lệnh
 ```
@@ -28,15 +28,16 @@ Bước 2: Cài đặt kubeclt
 ###
 Download về phiên bản kubeclt mới nhất với lệnh
 ```
-# curl -LO https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl
+# curl -LO https://storage.googleapis.com/kubernetes-release/release/`curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt`/bin/linux/amd64/kubectl
 ```
 Cài đặt kubeclt với lệnh sau:
 ```
-# sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+# chmod +x ./kubectl
+# sudo mv ./kubectl /usr/local/bin/kubectl
 ```
 Kiểm tra cài đặt bằng lệnh:
 ```
-# kubectl version –short
+# kubectl version --client
 ```
 Bước 3: Cài đặt Conntrack với lệnh sau
 ```
@@ -51,12 +52,11 @@ Download file cài đặt và cấp quyền thực thi bằng lệnh
 ```
 Tiến hành cài đặt minikube
 ```
-# sudo mkdir -p /usr/local/bin/
-# sudo install minikube /usr/local/bin/
+# sudo mv minikube /usr/local/bin/
 ```
 Chạy minikube trên server với lệnh
 ```
-# minikube start --network-plugin=cni --vm-driver=docker –-force
+# minikube start --driver=none
 ```
 Kiểm tra cài đặt bằng lệnh
 ```
