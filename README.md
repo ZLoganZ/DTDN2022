@@ -79,7 +79,10 @@ Bước 5: Triển khai mongodb
 # git clone https://github.com/ZLoganZ/DTDN2022.git
 # cd DTDN2022/
 # cd mongo/
-# kubectl create -k .
+# kubectl apply -f mongodb-secret.yaml
+# kubectl apply -f mongodb-deployment.yaml 
+# kubectl apply -f mongo-configmap.yaml
+# kubectl apply -f mongo-express-deployment.yaml
 ```
 Kiểm tra các thành phần đang chạy
 ```
