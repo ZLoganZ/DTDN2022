@@ -41,7 +41,7 @@ Kiểm tra cài đặt bằng lệnh:
 ```
 Bước 3: Cài đặt Conntrack với lệnh sau
 ```
-# sudo apt-get install -y conntrack
+# sudo apt install conntrack
 ```
 Bước 4: Cài đặt minikube
 ###
