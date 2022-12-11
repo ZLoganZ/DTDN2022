@@ -11,6 +11,10 @@ Tăng Phúc Toàn `20110100`
 ## Các bước cài đặt demo đơn giản
 Bước 1: Cài đặt docker
 ###
+Trước hết ta dùng lệnh
+```
+# sudo apt update
+```
 Thực hiện lệnh cài đặt:
 ```
 # sudo apt install -y docker.io
