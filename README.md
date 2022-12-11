@@ -65,10 +65,6 @@ hoặc
 ```
 # kubectl get pods -A
 ```
-Kiểm tra trạng thái minikube
-```
-# minikube status
-```
 Kiểm tra thông tin kubenertes cluster
 ```
 # kubectl cluster-info
@@ -79,6 +75,8 @@ Kiểm tra các node trong cluster
 ```
 Bước 5: Triển khai mongodb
 ```
+# git clone https://github.com/ZLoganZ/DTDN2022.git
+# cd DTDN2022/
 # cd mongo/
 # kubectl create -k .
 ```
