@@ -13,6 +13,7 @@ Bước 1: Cài đặt docker
 ###
 Trước hết ta dùng lệnh
 ```
+$ sudo su
 # sudo apt update
 ```
 Thực hiện lệnh cài đặt:
