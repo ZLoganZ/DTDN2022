@@ -45,7 +45,7 @@ Bước 4: Cài đặt minikube
 ###
 Download file cài đặt và cấp quyền thực thi bằng lệnh
 ```
-# curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
+# curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
 # chmod +x minikube
 ```
 Tiến hành cài đặt minikube
@@ -55,7 +55,7 @@ Tiến hành cài đặt minikube
 ```
 Chạy minikube trên server với lệnh
 ```
-# minikube start --network-plugin=cni --vm-driver=docker –force
+# minikube start --network-plugin=cni --vm-driver=docker –-force
 ```
 Kiểm tra cài đặt bằng lệnh
 ```
