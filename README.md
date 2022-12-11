@@ -79,7 +79,6 @@ Kiểm tra các node trong cluster
 ```
 Bước 5: Triển khai mongodb
 ```
-# sudo su
 # cd mongo/
 # kubectl create -k .
 ```
