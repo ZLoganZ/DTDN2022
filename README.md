@@ -43,7 +43,7 @@ Cài đặt kubeclt với lệnh sau:
 ```
 Kiểm tra cài đặt bằng lệnh:
 ```
-# kubectl version –short
+# kubectl version --client
 ```
 Bước 3: Cài đặt Conntrack với lệnh sau
 ```
