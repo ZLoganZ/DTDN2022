@@ -12,7 +12,21 @@ Tăng Phúc Toàn `20110100`
 Bước 1: Cài đặt docker
 Thực hiện lệnh cài đặt:
 ```
-# sudo apt install -y docker.io
+$ sudo su 
+# sudo apt-get update
+# sudo apt-get install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+# curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+# sudo add-apt-repository \
+   "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+   $(lsb_release -cs) \
+   stable"
+# sudo apt-get update
+# sudo apt-get install docker-ce docker-ce-cli containerd.io
 ```
 Kiểm tra phiên bản docker bằng lệnh
 ```
