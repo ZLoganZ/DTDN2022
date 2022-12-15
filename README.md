@@ -60,7 +60,50 @@ Tiến hành cài đặt minikube
 # sudo mkdir -p /usr/local/bin/
 # sudo install minikube /usr/local/bin/
 ```
-Chạy minikube trên server với lệnh
+Cài Cri-dockerd
+```
+# git clone https://github.com/Mirantis/cri-dockerd.git
+# wget https://storage.googleapis.com/golang/getgo/installer_linux
+# chmod +x ./installer_linux
+# ./installer_linux
+# source ~/.bash_profile
+# cd cri-dockerd
+# mkdir bin
+# go build -o bin/cri-dockerd
+# mkdir -p /usr/local/bin
+# install -o root -g root -m 0755 bin/cri-dockerd /usr/local/bin/cri-dockerd
+# cp -a packaging/systemd/* /etc/systemd/system
+# sed -i -e 's,/usr/bin/cri-dockerd,/usr/local/bin/cri-dockerd,' /etc/systemd/system/cri-docker.service
+# systemctl daemon-reload
+# systemctl enable cri-docker.service
+# systemctl enable --now cri-docker.socket
+```
+Cài CRI-O Container Runtime
+```
+# sudo apt update && sudo apt upgrade
+# sudo systemctl reboot
+# OS=xUbuntu_18.04
+# CRIO_VERSION=1.23
+# echo "deb https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/ /"|sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable.list
+# echo "deb http://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable:/cri-o:/$CRIO_VERSION/$OS/ /"|sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:cri-o:$CRIO_VERSION.list
+# curl -L https://download.opensuse.org/repositories/devel:kubic:libcontainers:stable:cri-o:$CRIO_VERSION/$OS/Release.key | sudo apt-key add -
+# curl -L https://download.opensuse.org/repositories/devel:/kubic:/libcontainers:/stable/$OS/Release.key | sudo apt-key add -
+# sudo apt update
+# sudo apt install cri-o cri-o-runc
+# sudo systemctl enable crio.service
+# sudo systemctl start crio.service
+# sudo apt install cri-tools
+```
+Cài Calico CNI
+```
+# apt install firewalld
+# firewall-cmd --add-port=179/tcp --permanent
+# firewall-cmd --reload
+# curl https://docs.projectcalico.org/manifests/calico.yaml -O
+# ls -l calico.yaml
+# kubectl apply -f calico.yaml
+```
+Sau khi cài tất cả xong thì ta chạy minikube trên server với lệnh
 ```
 # minikube start --vm-driver=none
 ```
