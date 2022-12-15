@@ -94,15 +94,6 @@ Cài CRI-O Container Runtime
 # sudo systemctl start crio.service
 # sudo apt install cri-tools
 ```
-Cài Calico CNI
-```
-# apt install firewalld
-# firewall-cmd --add-port=179/tcp --permanent
-# firewall-cmd --reload
-# curl https://docs.projectcalico.org/manifests/calico.yaml -O
-# ls -l calico.yaml
-# kubectl apply -f calico.yaml
-```
 Sau khi cài tất cả xong thì ta chạy minikube trên server với lệnh
 ```
 # minikube start --vm-driver=none
@@ -122,6 +113,15 @@ Kiểm tra thông tin kubenertes cluster
 Kiểm tra các node trong cluster
 ```
 # kubectl get nodes -A
+```
+Cài Calico CNI
+```
+# apt install firewalld
+# firewall-cmd --add-port=179/tcp --permanent
+# firewall-cmd --reload
+# curl https://docs.projectcalico.org/manifests/calico.yaml -O
+# ls -l calico.yaml
+# kubectl apply -f calico.yaml
 ```
 Bước 5: Triển khai mongodb
 ```
