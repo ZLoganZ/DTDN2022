@@ -62,7 +62,7 @@ Tiến hành cài đặt minikube
 ```
 Chạy minikube trên server với lệnh
 ```
-# minikube start --vm-driver=docker --force
+# minikube start --vm-driver=none
 ```
 Kiểm tra cài đặt bằng lệnh
 ```
