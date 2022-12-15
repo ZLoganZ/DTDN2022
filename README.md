@@ -74,7 +74,7 @@ Cài Cri-dockerd
 ```
 Chạy minikube trên server với lệnh
 ```
-# minikube start --network-plugin=cni --vm-driver=docker –-force
+# minikube start --network-plugin=cni --vm-driver=docker --force
 ```
 Kiểm tra cài đặt bằng lệnh
 ```
