@@ -75,6 +75,7 @@ Bước 5: Triển khai mongodb
 # kubectl apply -f mongodb-deployment.yaml 
 # kubectl apply -f mongo-configmap.yaml
 # kubectl apply -f mongo-express-deployment.yaml
+# kubectl apply -f mongodb-pv.yaml
 ```
 Kiểm tra các thành phần đang chạy
 ```
